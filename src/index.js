@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function hello(user){
-	return `${user.name}`;
-
+function clock(){
+	let element = <h1>{new Date().toLocaleTimeString()}</h1>;
+	ReactDOM.render(element, document.getElementById('root'));
 }
 
-let user = {
-	name: "Rufo N. Gabrillo Jr."
-}
-
-let App = <h1>{hello()}</h1>;
-
-
-ReactDOM.render(App, document.getElementById('root'));
+setInterval(function(){
+	clock();
+},1000);
