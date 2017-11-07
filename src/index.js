@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+let a = 0;
 function clock(){
-	let element = <h1>{new Date().toLocaleTimeString()}</h1>;
+	a++;
+	let element = <h1>{a}</h1>;
 	ReactDOM.render(element, document.getElementById('root'));
 }
 
